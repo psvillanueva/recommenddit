@@ -1,28 +1,10 @@
-== README
+== Recommenddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Source code for Recommenddit, a Rails application that recommends subreddits and similar users. 
+Enter your Reddit username to get your recommendations.
 
-Things you may want to cover:
+Currently running on Heroku: recommenddit.herokuapp.com
 
-* Ruby version
+**In development
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Ruby version = 2.0.1
