@@ -1,0 +1,32 @@
+<% @title="Recommenddit - Users" %>
+<div class="container">
+  
+<h1>Users</h1>
+<h3>Number of users: <%= @user_count %></h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Reddit URL</th>
+      <th>Most Compatible User</th>
+      <th>Reddit URL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username %></td>
+        <td><%= link_to ("http://reddit.com/user/" + user.username), "http://reddit.com/user/" + user.username %></td>
+        <td><%= user.similar_user_0 %></td>
+        <td> <% if user.similar_user_0 != nil %>
+          <%= link_to ("http://reddit.com/user/" + user.similar_user_0), "http://reddit.com/user/" + user.similar_user_0 %>
+          <% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br><br>
+
+</div>

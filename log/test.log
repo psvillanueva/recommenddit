@@ -1,0 +1,782 @@
+  [1m[36m (111.9ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (299.9ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:18', '2014-03-17 19:28:18')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:28:19', '2014-03-17 19:28:19')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (105.5ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (245.8ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (5.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:31:44', '2014-03-17 19:31:44')
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (104.6ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (250.3ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:33:07', '2014-03-17 19:33:07')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (106.0ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (253.0ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:37:06', '2014-03-17 19:37:06')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (106.0ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (245.1ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (18.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+PG::UndefinedColumn: ERROR:  column "reddit_url" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "reddit_url", "similar_user...
+                                         ^
+: INSERT INTO "users" ("username", "reddit_url", "similar_user", "similar_user_url", "created_at", "updated_at") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-03-17 19:38:32', '2014-03-17 19:38:32')
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (104.4ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (253.9ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:39:05', '2014-03-17 19:39:05')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:39:05', '2014-03-17 19:39:05')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 112ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Processing by StaticPagesController#contact as HTML
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"similar_user"=>"MyString", "username"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.2ms)[0m  INSERT INTO "users" ("created_at", "similar_user", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "username"  [["created_at", Mon, 17 Mar 2014 19:39:06 UTC +00:00], ["similar_user", "MyString"], ["updated_at", Mon, 17 Mar 2014 19:39:06 UTC +00:00], ["username", "MyString"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/MyString
+Completed 302 Found in 22ms (ActiveRecord: 11.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"MyString"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "MyString"]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "MyString"]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (66.7ms)
+Completed 500 Internal Server Error in 127ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"MyString"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "MyString"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (105.5ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (253.2ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.7ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:40:13', '2014-03-17 19:40:13')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:40:13', '2014-03-17 19:40:13')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 89ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Processing by StaticPagesController#contact as HTML
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (104.8ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (247.5ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (5.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:40:55', '2014-03-17 19:40:55')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:40:55', '2014-03-17 19:40:55')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Processing by StaticPagesController#contact as HTML
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"similar_user"=>"MyString", "username"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.3ms)[0m  INSERT INTO "users" ("created_at", "similar_user", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "username"  [["created_at", Mon, 17 Mar 2014 19:40:55 UTC +00:00], ["similar_user", "MyString"], ["updated_at", Mon, 17 Mar 2014 19:40:55 UTC +00:00], ["username", "MyString"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/MyString
+Completed 302 Found in 22ms (ActiveRecord: 11.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (80.8ms)
+Completed 500 Internal Server Error in 120ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "MyString"]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"MyString"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (104.9ms)[0m  [1mDROP DATABASE IF EXISTS "test"[0m
+  [1m[35m (247.2ms)[0m  CREATE DATABASE "test" ENCODING = 'UTF8' TEMPLATE = "template0"
+  [1m[36mSQL (4.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "similar_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305204101')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224043753')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140305203351')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:41:25', '2014-03-17 19:41:25')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("username", "similar_user", "created_at", "updated_at") VALUES ('MyString', 'MyString', '2014-03-17 19:41:25', '2014-03-17 19:41:25')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 101ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Processing by StaticPagesController#contact as HTML
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"similar_user"=>"MyString", "username"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.8ms)[0m  INSERT INTO "users" ("created_at", "similar_user", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "username"  [["created_at", Mon, 17 Mar 2014 19:41:25 UTC +00:00], ["similar_user", "MyString"], ["updated_at", Mon, 17 Mar 2014 19:41:25 UTC +00:00], ["username", "MyString"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/MyString
+Completed 302 Found in 22ms (ActiveRecord: 11.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "MyString"]]
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: development
+  username: vagrant
+  template: template0
+  encoding: UTF8
+
+test:
+  adapter: postgresql
+  database: test
+  username: vagrant
+  encoding: UTF8
+  template: template0
+  min_messages: WARNING
