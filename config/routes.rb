@@ -58,7 +58,7 @@ Code::Application.routes.draw do
 
   root 'static_pages#index'
   get '/random', to: 'users#random', as: 'random'
-  get 'static_pages/index', as: 'index'
-  get 'static_pages/about', as: 'about'
-  get 'static_pages/contact', as: 'contact'
+  get '/index', to: 'static_pages#index', as: 'index'
+  get '/about', to: 'static_pages#about', as: 'about'
+  get '/contact', to: 'static_pages#contact', as: 'contact'
 end
