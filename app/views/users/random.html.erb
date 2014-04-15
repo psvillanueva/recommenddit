@@ -2,41 +2,60 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>User: <%= link_to @user_record.username, ("http://reddit.com/user/" + @user_record.username) %></h1>
-<h2>Posts to: <%= @user_record.num_subreddits %> subreddits</h2>
+<h1 class="page-header">User: <%= link_to @user_record.username, ("http://reddit.com/user/" + @user_record.username) %></h1>
+<h2 class="sub-header">Statistics</h2>
+Posts to: <%= @user_record.num_subreddits %> subreddits<br>
+Link Karma: <%= @link_karma %><br>
+Comment Karma: <%= @comment_karma %><br>
+Redditor for: <%= @age %><br>
+Posted to: 
+<% if @user_subreddits != nil && @user_subreddits.subreddit_0 != nil %>
+  <%= link_to ("/r/" + @user_subreddits.subreddit_0), ("http://reddit.com/r/" + @user_subreddits.subreddit_0) %><br>
+  <% else %>
+  <br>
+<% end %>
+Latest post: <%= @latest_post %>
 
-<table class="table table-hover">
+<h2 class="sub-header">User Recommendations</h2>
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th><h3>Similar Users</h3></th>
-      <th><h3>Similarity Score</h3></th>
+      <th>Similar Users</th>
+      <th>Similarity Score</th>
+      <th>Recommended Subreddits</th>
     </tr>
   </thead>
 
   <tbody>
-  	<% similarity = 0 %>
-  	<% @user_record.attributes.each do |key, value| %>
-  	  <% if key.to_s.include?("similarity") && value == 0 %>
-  	    	<% break %>
-  	  <% end %>
-  	  <% if key.to_s.include?("similarity") %>
-  	  	<% similarity = value %>
-  	  <% end %>
-  	  <% if key.to_s.include?("similar_user") && value != nil %>
-  	  	<tr>
-  	  		<td>
-  	  			<%= link_to value, ("http://www.reddit.com/user/" + value) %>
-  	  		</td>
-  	  		<td>
-  	  			<%= similarity %>
-  	  		</td>
-  	  	</tr>
-  	  <% end %>
-  	<% end %>
+    <% similarity = 0 %>
+    <% @user_record.attributes.each do |key, value| %>
+
+      <!-- No more similar users, break -->
+      <% if key.to_s.include?("similarity") && value == 0 %>
+          <% break %>
+      <% end %>
+
+      <% if key.to_s.include?("similarity") %>
+        <% similarity = value %>
+      <% end %>
+
+      <!-- Create row as long as user exists -->
+      <% if key.to_s.include?("similar_user") && value != nil %>
+        <tr>
+          <td>
+            <%= link_to value, ("http://www.reddit.com/user/" + value) %>
+          </td>
+          <td>
+            <%= similarity %>
+          </td>
+        </tr>
+      <% end %>
+
+    <% end %>
   </tbody>
 </table>
 <br><br>
-	
+  
 </div>
 <br>
 

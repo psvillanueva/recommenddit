@@ -1,16 +1,22 @@
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
-    @user_count = User.count('username', :distinct => true)
+    @users      = User.all
+    @user_count = User.distinct.count('username')
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    page   = Nokogiri::HTML(open("http://www.reddit.com/user/im1ru12"))   
+    @karma = page.css("span[class='karma']").text
   end
 
   # GET /users/new
@@ -19,7 +25,15 @@ class UsersController < ApplicationController
   end
 
   def random
-    @user_record = User.first(:offset => rand(User.count))
+     @user_record   = User.first(:offset => rand(User.count))
+     page           = Nokogiri::HTML(open("http://www.reddit.com/user/" + @user_record.username))  
+     
+     @link_karma    = page.css("span[class='karma']").text
+     @comment_karma = page.css("span[class='karma comment-karma']").text
+     @age           = page.css("time")[0].text
+     
+     post           = page.css("p[class='parent']").to_s()
+     @latest_post   = post.html_safe
   end
 
   # # GET /users/1/edit
@@ -78,6 +92,19 @@ class UsersController < ApplicationController
 
       # @user_record = User.find(query) if query != nil
       @user_record = User.find(:first, :conditions => ["lower(username) = ?", query.downcase])
+
+      page           = Nokogiri::HTML(open("http://www.reddit.com/user/" + @user_record.username))  
+      
+      @link_karma    = page.css("span[class='karma']").text
+      @comment_karma = page.css("span[class='karma comment-karma']").text
+      @age           = page.css("time")[0].text
+      
+      post           = page.css("p[class='parent']").to_s()
+      @latest_post   = post.html_safe
+
+      username = @user_record.username
+      # get user's subreddits
+      @user_subreddits = UserSubreddits.find(username)
 
       if @user_record === nil
         redirect_to root_url, :flash => { :error => "Record not found." }

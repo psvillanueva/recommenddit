@@ -43,3 +43,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Nokogiri for HTML file parsing
+gem 'nokogiri'
+
+# Use D3.js for data visualization
+# gem 'd3-rails'
