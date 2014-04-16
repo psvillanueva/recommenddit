@@ -16,12 +16,15 @@ Posted to:
     List of subreddits <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
+  <!-- create array of user's subreddits -->
+  <% @subreddits = [] %>
 <% @user_subreddits.attributes.each do |key, value| %>
 <!-- Button drop-down for subreddits list -->
   <% if key.to_s.include?("subreddit") && value === nil %>
     <% break %>
     <% elsif key.to_s.include?("subreddit") %>
       <li><%= link_to ("/r/" + value), ("http://reddit.com/r/" + value) %></li>
+      <% @subreddits << value %>
     <% end %>
   <% end %>
   </ul>
@@ -52,7 +55,16 @@ Posted to:
         <td><%= link_to key, ("http://reddit.com/u/" + key) %></td>
         <td><%= value[0] %></td>
         <% subreddits = value.slice(1, value.length) %>
-        <td><%= subreddits %></td>
+        <td><% subreddits.each do |x| %>
+              <div style="float:left; padding: 2px 2px 2px 2px;">
+              <% if @subreddits.include?(x) %>
+                <%= button_to x, ("http://reddit.com/r/" + x), class: "btn btn-danger" %>
+              <% else %>
+                <%= button_to x, ("http://reddit.com/r/" + x), class: "btn btn-success" %>
+              <% end %>
+              </div>
+            <% end %>
+        </td>
       <tr>
     <% end %>
   </tbody>
