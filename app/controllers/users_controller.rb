@@ -104,7 +104,58 @@ class UsersController < ApplicationController
 
       username = @user_record.username
       # get user's subreddits
-      @user_subreddits = UserSubreddits.find(username)
+      if UserSubreddits.exists?(username)
+        @user_subreddits = UserSubreddits.find(username)
+      else
+        @user_subreddits = nil
+      end
+
+      # recommended subreddits
+      @rcmd_subreddits = Hash.new
+
+      similarity_value = 0
+      
+      # create subreddits arrays for each user
+      @user_record.attributes.each do |key, value|
+        # if similar_user, we know that value contains a username
+        if key.to_s.include?("similar_user")
+          # no more similar users, break out of loop
+          if value === nil
+            break
+          end
+
+          subreddit_arr = [similarity_value]
+
+          if UserSubreddits.exists?(value)
+            similar_user_subreddits = UserSubreddits.find(value)
+          else
+            @rcmd_subreddits[value] = subreddit_arr
+            next
+          end
+
+          # similar user does not have a subreddits record, just add name to hash and break
+          # if similar_user_subreddits === nil
+          #   @rcmd_subreddits[key] = subreddit_arr
+          #   break 
+          # end
+
+          # similar user subreddits record found, make an array out of those subreddits
+          similar_user_subreddits.attributes.each do |key2, value2|
+            # no more subreddits
+            if key2.to_s.include?("subreddit") && value2 === nil 
+              break
+            elsif key2.to_s.include?("subreddit")
+              subreddit_arr << value2
+            end
+          end
+
+          # create key, pair for username and associated reddits
+          @rcmd_subreddits[value] = subreddit_arr
+        elsif key.to_s.include?("similarity")
+          similarity_value = value
+        end
+      end
+
 
       if @user_record === nil
         redirect_to root_url, :flash => { :error => "Record not found." }
